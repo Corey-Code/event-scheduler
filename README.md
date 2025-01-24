@@ -1,7 +1,7 @@
 <!-- prettier-ignore-start -->
 # Event Scheduler
 
-#### The Event Scheduler is a job scheduling service that allows you to create, update, and delete scheduled events via RESTful APIs. The scheduler supports job persistence across restarts TODO:
+#### The Event Scheduler is a job scheduling service that allows you to create, update, and delete scheduled events via RESTful APIs. The scheduler supports job persistence across restarts using Redis and MongoDB. The system ensures horizontal scalability by leveraging Redis locks to prevent multiple instances of the application from processing the same job simultaneously.
 
 ## Features:
 
@@ -9,7 +9,7 @@
 #### Job Scheduling: Schedule jobs to be executed at a specified time.
 #### Persistence: Jobs are stored in MongoDB and persist across application restarts.
 #### Job Execution: When a job is executed, the job's parameters are printed to the console.
-
+#### Horizontal Scaling: Redis-based job locking ensures that jobs are executed by only one instance of the application even if scaled horizontally.
 
 ## Prerequisites:
 #### Node v22.0 or later

@@ -1,11 +1,19 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["ES2017", "DOM"],
+    "target": "ES2020",
     "module": "CommonJS",
+    "moduleResolution": "node",
     "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
     "rootDir": "./src",
-    "esModuleInterop": true
-  }
+    "baseUrl": "./",
+    "resolveJsonModule": true, // Allow importing of .json files
+    "noImplicitAny": true,
+    "allowJs": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }

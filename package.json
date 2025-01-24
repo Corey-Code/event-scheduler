@@ -1,9 +1,9 @@
 {
   "name": "event-scheduler",
   "version": "1.0.0",
-  "main": "server.ts",
-  "type": "module",
+  "main": "index.js",
   "scripts": {
+    "start": "npx ts-node src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,14 +11,15 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@types/luxon": "^3.4.2",
     "express": "^4.21.2",
     "joi": "^17.13.3",
+    "luxon": "^3.5.0",
     "mongoose": "^8.9.5",
     "node-cron": "^3.0.3"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
+    "@types/luxon": "^3.4.2",
     "@types/node-cron": "^3.0.11"
   }
 }

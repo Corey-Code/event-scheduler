@@ -2,6 +2,8 @@ import cron from 'node-cron';
 import Job from './models/job';
 import { DateTime } from 'luxon';
 
+// FIXME: Redis could handle the horz. scaling...
+
 const scheduleJob = (job: any) => {
   // Run the job if the start date is less than or equal to current time
   if (DateTime.fromISO(job.startDate).toMillis() <= DateTime.now().toMillis()) {
