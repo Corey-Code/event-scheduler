@@ -12,7 +12,8 @@ export const createEvent = async (req: Request, res: Response) => {
     }
 
     const event = req.body;
-    const createdEvent = eventService.createEvent(event);
+    const createdEvent = await eventService.createEvent(event);
+    console.log('createdEvent', createdEvent);
     res.status(201).json(createdEvent);
   } catch (err) {
     res.status(500).json({
@@ -33,7 +34,7 @@ export const updateEvent = async (req: Request, res: Response) => {
 
     const eventId = req.params.id;
     const updatedEvent = req.body;
-    const result = eventService.updateEvent(eventId, updatedEvent);
+    const result = await eventService.updateEvent(eventId, updatedEvent);
     if (result) {
       res.json(result);
     } else {
@@ -50,7 +51,7 @@ export const updateEvent = async (req: Request, res: Response) => {
 export const deleteEvent = async (req: Request, res: Response) => {
   try {
     const eventId = req.params.id;
-    const success = eventService.deleteEvent(eventId);
+    const success = await eventService.deleteEvent(eventId);
     if (success) {
       res.status(204).send();
     } else {
@@ -65,7 +66,7 @@ export const deleteEvent = async (req: Request, res: Response) => {
 export const getEventById = async (req: Request, res: Response) => {
   try {
     const eventId = req.params.id;
-    const event = eventService.getEventById(eventId);
+    const event = await eventService.getEventById(eventId);
     if (!event) {
       return res.status(404).json({ message: 'Event not found' });
     }
@@ -77,6 +78,6 @@ export const getEventById = async (req: Request, res: Response) => {
 };
 
 export const getAllEvents = async (req: Request, res: Response) => {
-  const events = eventService.getAllEvents();
+  const events = await eventService.getAllEvents();
   return res.json(events);
 };

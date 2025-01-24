@@ -4,8 +4,8 @@ import app from '../app'; // Import the Express app
 // Sample event data to use in tests
 const newEvent = {
   eventName: 'Morning Scene',
-  startDate: '2024-01-01',
-  endDate: '2024-01-31',
+  startDate: '2025-01-01',
+  endDate: '2025-01-31',
   recurrence: {
     interval: 1,
     frequency: 'day',
