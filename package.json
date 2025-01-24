@@ -11,6 +11,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@types/luxon": "^3.4.2",
     "express": "^4.21.2",
     "mongoose": "^8.9.5",
     "node-cron": "^3.0.3"
