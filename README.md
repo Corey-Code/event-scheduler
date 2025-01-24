@@ -13,6 +13,7 @@
 
 ## Prerequisites:
 #### Node v22.0 or later
+#### TS-Node
 #### MongoDB
 
 ## Installation

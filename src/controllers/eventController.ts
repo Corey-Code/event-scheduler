@@ -4,7 +4,6 @@ import { eventSchema } from '../validators/eventValidator';
 
 export const createEvent = async (req: Request, res: Response) => {
   try {
-    // Validate request body
     const { error } = eventSchema.validate(req.body);
     if (error) {
       return res
@@ -25,7 +24,6 @@ export const createEvent = async (req: Request, res: Response) => {
 
 export const updateEvent = async (req: Request, res: Response) => {
   try {
-    // Validate request body
     const { error } = eventSchema.validate(req.body);
     if (error) {
       return res

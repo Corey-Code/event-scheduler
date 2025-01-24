@@ -1,14 +1,10 @@
 import { Request, Response, NextFunction } from 'express';
 
-//
-// Type it out
 interface ErrorResponse {
   status: number;
   message: string;
 }
 
-//
-// Make the handler
 export const errorHandler = (
   err: ErrorResponse,
   req: Request,
